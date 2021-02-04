@@ -3,7 +3,6 @@ class Heroku < Formula
   homepage "https://cli.heroku.com"
   url "https://cli-assets.heroku.com/heroku-v7.47.12/heroku-v7.47.12.tar.xz"
   sha256 "19e33f66cd90319206408b3c0d8755ccd25830db9c7b9026cd93ba84ed94913f"
-  depends_on "heroku/brew/heroku-node"
 
   def install
     inreplace "bin/heroku", /^CLIENT_HOME=/, "export HEROKU_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
